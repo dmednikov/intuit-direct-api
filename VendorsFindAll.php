@@ -1,12 +1,15 @@
 <?php
 
 try {
-    $oauth = new OAuth("qyprdZrORl2gSGHJZRqvKV7HLfOKb6","v4PmNNqcs12uKX2BV6WISRlXfL9ewSFHw07Llcx5",OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_AUTHORIZATION);
-
-    $oauth->setToken("lvprdS7AoEZ3uWjQJcrSRaT1iQvETdlMwqwhobOWpdowVRah","mTRkAkWWSZTjkbLQbVWof9cVfA6TYD3tQI5499A7");
+	$realmId = "193514345847732"; //companyId
+	$baseUrl = "https://quickbooks.api.intuit.com"; //
+	//consumer_key, consumer_secret
+    $oauth = new OAuth("qyprdeMg9WAM5dF49u45Xp4vTxaZJi","2AhJKtRAN63XVowrlQC8mc68U6aNQzPwONVVdn5u",OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_AUTHORIZATION);
+	//access_token, access_token_secret
+    $oauth->setToken("lvprdIYmd6lnzedx3EBEnusDAE33mXZ5OWKfdyU4FiiDw3jx","LsmYVp9raqsNN0YTlSMeyCN1uQ81HwHCp0ZXJuTp");
 	
 	$oauth->disableSSLChecks();
-    $oauth->fetch("https://sandbox-quickbooks.api.intuit.com/v3/company/193514450140099/query?query=SELECT%20COUNT(*)%20FROM%20Vendor&minorversion=4");
+    $oauth->fetch($baseUrl."/v3/company/".$realmId."/query?query=SELECT%20COUNT(*)%20FROM%20Vendor&minorversion=4");
 
     $response_info = $oauth->getLastResponseInfo();	
 	$fileName = "vendors.txt";
@@ -21,7 +24,7 @@ try {
 	ob_start();
 	while( $currentCount < $totalCount){
 		//call QB API
-		$oauth->fetch("https://sandbox-quickbooks.api.intuit.com/v3/company/193514450140099/query?query=select%20%2A%20from%20Vendor%20STARTPOSITION%20".$currentCount."%20MAXRESULTS%201000&minorversion=4");
+		$oauth->fetch($baseUrl."/v3/company/".$realmId."/query?query=select%20%2A%20from%20Vendor%20STARTPOSITION%20".$currentCount."%20MAXRESULTS%201000&minorversion=4");
 		//get response in XML
 		$response = new SimpleXMLElement($oauth->getLastResponse());
 		//reset the count of the returned results
@@ -47,7 +50,7 @@ try {
 	// output content to a file
 	file_put_contents($fileName, $accounts);
 
-	echo "Please find all vendors in vendor.txt\n";
+	echo "Please find all vendors in vendors.txt\n";
 
 
 		
