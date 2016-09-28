@@ -1,64 +1,65 @@
 <?php
+if (!extension_loaded('oauth')) {
+    exit("OAuth extension is not installed");
+}
+require_once "Account.php";
 
 try {
-	$realmId = "193514345847732"; //companyId
-	$baseUrl = "https://quickbooks.api.intuit.com"; //
-	//consumer_key, consumer_secret
-    $oauth = new OAuth("qyprdeMg9WAM5dF49u45Xp4vTxaZJi","2AhJKtRAN63XVowrlQC8mc68U6aNQzPwONVVdn5u",OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_AUTHORIZATION);
-	//access_token, access_token_secret
-    $oauth->setToken("lvprdIYmd6lnzedx3EBEnusDAE33mXZ5OWKfdyU4FiiDw3jx","LsmYVp9raqsNN0YTlSMeyCN1uQ81HwHCp0ZXJuTp");
-	
-	$oauth->disableSSLChecks();
-    $oauth->fetch($baseUrl."/v3/company/".$realmId."/query?query=SELECT%20COUNT(*)%20FROM%20Account&minorversion=4");
+    $account = new Account();
+    
+    exit($account->printOut());
+    
+    $fileName = ConfigurationManager::AppSettings('AccountsFilename');
 
-    $response_info = $oauth->getLastResponseInfo();	
-	$fileName = "accounts.txt";
+    $realmId = ConfigurationManager::AppSettings('RealmID'); //companyId
+    $baseUrl = ConfigurationManager::AppSettings('BaseURL');
 
-	$count = new SimpleXMLElement($oauth->getLastResponse());
-	$totalCount = $count->QueryResponse['totalCount']; //total amount of records
+    $oauth = new OAuth(ConfigurationManager::AppSettings('ConsumerKey'), ConfigurationManager::AppSettings('ConsumerSecret'), OAUTH_SIG_METHOD_HMACSHA1, OAUTH_AUTH_TYPE_AUTHORIZATION);
+    $oauth->setToken(ConfigurationManager::AppSettings('AccessToken'), ConfigurationManager::AppSettings('AccessTokenSecret'));
 
-	$currentCount = 1 ;
-	
-	$i = 1;// how many records
-	// turn on output buffering
-	ob_start();
-	while( $currentCount < $totalCount){
-		//call QB API
-		$oauth->fetch($baseUrl."/v3/company/".$realmId."/query?query=select%20%2A%20from%20Account%20STARTPOSITION%20".$currentCount."%20MAXRESULTS%201000&minorversion=4");
-		//get response in XML
-		$response = new SimpleXMLElement($oauth->getLastResponse());
-		//reset the count of the returned results
-		$newCount = $response->QueryResponse->Account->count();
-		$currentCount += $newCount;
-		
+    $oauth->disableSSLChecks();
+    $oauth->fetch($baseUrl . "/v3/company/" . $realmId . "/query?query=SELECT%20COUNT(*)%20FROM%20Account&minorversion=4");
 
-		foreach($response->QueryResponse->Account as $account)
-		{
-			echo "Account[".($i++)."]: {$account->Name}\n";
-			echo "\t * Id: [{$account->Id}]\n";
-			echo "\t * Account Type: [{$account->AccountType}]\n";
-			echo "\t * Active: [{$account->Active}]\n";
-			echo "\n";
-		}
-		
-	}
+    $response_info = $oauth->getLastResponseInfo();
 
-	// buffer content
-	$accounts = ob_get_contents();
-	// flush buffer
-	ob_end_clean(); 
-	// output content to a file
-	file_put_contents($fileName, $accounts);
+    $count = new SimpleXMLElement($oauth->getLastResponse());
+    $totalCount = $count->QueryResponse['totalCount']; //total amount of records
 
-	echo "Please find all accounts in accounts.txt\n";
+    $currentCount = 1;
 
+    $i = 1; // how many records
+    // turn on output buffering
+    ob_start();
+    while ($currentCount < $totalCount) {
+        //call QB API
+        $oauth->fetch($baseUrl . "/v3/company/" . $realmId . "/query?query=select%20%2A%20from%20Account%20STARTPOSITION%20" . $currentCount . "%20MAXRESULTS%201000&minorversion=4");
+        //get response in XML
+        $response = new SimpleXMLElement($oauth->getLastResponse());
+        //reset the count of the returned results
+        $newCount = $response->QueryResponse->Account->count();
+        $currentCount += $newCount;
 
-		
+        foreach ($response->QueryResponse->Account as $account) {
+            echo "Account[" . ($i++) . "]: {$account->Name}\n";
+            echo "\t * Id: [{$account->Id}]\n";
+            echo "\t * Account Type: [{$account->AccountType}]\n";
+            echo "\t * Active: [{$account->Active}]\n";
+            echo "\n";
+        }
+    }
 
-} catch(OAuthException $E) {
+    // buffer content
+    $accounts = ob_get_contents();
+    // flush buffer
+    ob_end_clean();
+    // output content to a file
+    file_put_contents($fileName, $accounts);
+
+    echo "Please find all accounts in accounts.txt\n";
+} catch (OAuthException $E) {
     echo "Exception caught!\n";
-    echo "Response: ". $E->lastResponse . "\n";
-	echo "<pre>";
-	print_r($E);
+    echo "Response: " . $E->lastResponse . "\n";
+    echo "<pre>";
+    print_r($E);
 }
 ?>

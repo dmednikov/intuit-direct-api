@@ -1,0 +1,445 @@
+Account[1]: Accounts Payable (A/P)
+	 * Id: [33]
+	 * Account Type: [Accounts Payable]
+	 * Active: [true]
+
+Account[2]: Accounts Receivable (A/R)
+	 * Id: [84]
+	 * Account Type: [Accounts Receivable]
+	 * Active: [true]
+
+Account[3]: Advertising
+	 * Id: [7]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[4]: Arizona Dept. of Revenue Payable
+	 * Id: [89]
+	 * Account Type: [Other Current Liability]
+	 * Active: [true]
+
+Account[5]: Automobile
+	 * Id: [55]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[6]: Fuel
+	 * Id: [56]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[7]: Bank Charges
+	 * Id: [8]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[8]: Billable Expense Income
+	 * Id: [85]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[9]: Board of Equalization Payable
+	 * Id: [90]
+	 * Account Type: [Other Current Liability]
+	 * Active: [true]
+
+Account[10]: Checking
+	 * Id: [35]
+	 * Account Type: [Bank]
+	 * Active: [true]
+
+Account[11]: Commissions & fees
+	 * Id: [9]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[12]: Cost of Goods Sold
+	 * Id: [80]
+	 * Account Type: [Cost of Goods Sold]
+	 * Active: [true]
+
+Account[13]: Depreciation
+	 * Id: [40]
+	 * Account Type: [Other Expense]
+	 * Active: [true]
+
+Account[14]: Design income
+	 * Id: [82]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[15]: Discounts given
+	 * Id: [86]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[16]: Disposal Fees
+	 * Id: [28]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[17]: Dues & Subscriptions
+	 * Id: [10]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[18]: Equipment Rental
+	 * Id: [29]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[19]: Fees Billed
+	 * Id: [5]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[20]: Insurance
+	 * Id: [11]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[21]: Workers Compensation
+	 * Id: [57]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[22]: Interest Earned
+	 * Id: [25]
+	 * Account Type: [Other Income]
+	 * Active: [true]
+
+Account[23]: Inventory Asset
+	 * Id: [81]
+	 * Account Type: [Other Current Asset]
+	 * Active: [true]
+
+Account[24]: Job Expenses
+	 * Id: [58]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[25]: Cost of Labor
+	 * Id: [59]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[26]: Installation
+	 * Id: [60]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[27]: Maintenance and Repairs
+	 * Id: [61]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[28]: Equipment Rental
+	 * Id: [62]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[29]: Job Materials
+	 * Id: [63]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[30]: Decks and Patios
+	 * Id: [64]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[31]: Fountain and Garden Lighting
+	 * Id: [65]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[32]: Plants and Soil
+	 * Id: [66]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[33]: Sprinklers and Drip Systems
+	 * Id: [67]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[34]: Permits
+	 * Id: [68]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[35]: Landscaping Services
+	 * Id: [45]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[36]: Job Materials
+	 * Id: [46]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[37]: Decks and Patios
+	 * Id: [47]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[38]: Fountains and Garden Lighting
+	 * Id: [48]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[39]: Plants and Soil
+	 * Id: [49]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[40]: Sprinklers and Drip Systems
+	 * Id: [50]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[41]: Labor
+	 * Id: [51]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[42]: Installation
+	 * Id: [52]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[43]: Maintenance and Repair
+	 * Id: [53]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[44]: Legal & Professional Fees
+	 * Id: [12]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[45]: Accounting
+	 * Id: [69]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[46]: Bookkeeper
+	 * Id: [70]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[47]: Lawyer
+	 * Id: [71]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[48]: Loan Payable
+	 * Id: [43]
+	 * Account Type: [Other Current Liability]
+	 * Active: [true]
+
+Account[49]: Maintenance and Repair
+	 * Id: [72]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[50]: Building Repairs
+	 * Id: [73]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[51]: Computer Repairs
+	 * Id: [74]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[52]: Equipment Repairs
+	 * Id: [75]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[53]: Mastercard
+	 * Id: [41]
+	 * Account Type: [Credit Card]
+	 * Active: [true]
+
+Account[54]: Meals and Entertainment
+	 * Id: [13]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[55]: Miscellaneous
+	 * Id: [14]
+	 * Account Type: [Other Expense]
+	 * Active: [true]
+
+Account[56]: Notes Payable
+	 * Id: [44]
+	 * Account Type: [Long Term Liability]
+	 * Active: [true]
+
+Account[57]: Office Expenses
+	 * Id: [15]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[58]: Opening Balance Equity
+	 * Id: [34]
+	 * Account Type: [Equity]
+	 * Active: [true]
+
+Account[59]: Other Income
+	 * Id: [83]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[60]: Other Portfolio Income
+	 * Id: [26]
+	 * Account Type: [Other Income]
+	 * Active: [true]
+
+Account[61]: Penalties & Settlements
+	 * Id: [27]
+	 * Account Type: [Other Expense]
+	 * Active: [true]
+
+Account[62]: Pest Control Services
+	 * Id: [54]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[63]: Prepaid Expenses
+	 * Id: [3]
+	 * Account Type: [Other Current Asset]
+	 * Active: [true]
+
+Account[64]: Promotional
+	 * Id: [16]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[65]: Purchases
+	 * Id: [78]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[66]: Refunds-Allowances
+	 * Id: [6]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[67]: Rent or Lease
+	 * Id: [17]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[68]: Retained Earnings
+	 * Id: [2]
+	 * Account Type: [Equity]
+	 * Active: [true]
+
+Account[69]: Sales of Product Income
+	 * Id: [79]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[70]: Savings
+	 * Id: [36]
+	 * Account Type: [Bank]
+	 * Active: [true]
+
+Account[71]: Services
+	 * Id: [1]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[72]: Stationery & Printing
+	 * Id: [19]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[73]: Supplies
+	 * Id: [20]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[74]: Taxes & Licenses
+	 * Id: [21]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[75]: Travel
+	 * Id: [22]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[76]: Travel Meals
+	 * Id: [23]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[77]: Truck
+	 * Id: [37]
+	 * Account Type: [Fixed Asset]
+	 * Active: [true]
+
+Account[78]: Depreciation
+	 * Id: [39]
+	 * Account Type: [Fixed Asset]
+	 * Active: [true]
+
+Account[79]: Original Cost
+	 * Id: [38]
+	 * Account Type: [Fixed Asset]
+	 * Active: [true]
+
+Account[80]: Unapplied Cash Bill Payment Expense
+	 * Id: [88]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[81]: Unapplied Cash Payment Income
+	 * Id: [87]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[82]: Uncategorized Asset
+	 * Id: [32]
+	 * Account Type: [Other Current Asset]
+	 * Active: [true]
+
+Account[83]: Uncategorized Expense
+	 * Id: [31]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[84]: Uncategorized Income
+	 * Id: [30]
+	 * Account Type: [Income]
+	 * Active: [true]
+
+Account[85]: Undeposited Funds
+	 * Id: [4]
+	 * Account Type: [Other Current Asset]
+	 * Active: [true]
+
+Account[86]: Utilities
+	 * Id: [24]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[87]: Gas and Electric
+	 * Id: [76]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[88]: Telephone
+	 * Id: [77]
+	 * Account Type: [Expense]
+	 * Active: [true]
+
+Account[89]: Visa
+	 * Id: [42]
+	 * Account Type: [Credit Card]
+	 * Active: [true]
+
