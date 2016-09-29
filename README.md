@@ -1,9 +1,13 @@
 # intuit-direct-api
 
-These files require oauth php library and SimpleXML installed.
+These app requires oauth php library and SimpleXML installed.
 Other than that there no special requirements.
 
-Again, just like with the other git repo two php files generate two
-txt files.
-AccountsFindAll.php -> to list all accounts
-VendorsFindAll.php -> to list all vendors
+Installation and use:
+- Make sure that OAUTH and SimpleXML modules are installed on your machine
+- Clone the repo to your local machine (website root)
+- Point your browser to "http:/localhost/intuit-direct-api/index.php"
+- Accounts.txt and vendors.txt will be created
+- Links to the accounts.txt and vendors.txt will be displayed
+
+
